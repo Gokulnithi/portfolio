@@ -40,12 +40,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="flex-center section-padding">
+    <section id="contact" className="flex-center section-padding px-4 sm:px-6 md:px-10">
       <div className="w-full h-full md:px-10 px-5">
         <Title title="Get in Touch with me!" sub="Let’s talk! 🚀" />
         <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
-            <div className="flex-center card-border rounded-xl p-10">
+            <div className="flex-center card-border rounded-xl p-6 sm:p-10">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
@@ -92,8 +92,8 @@ const Contact = () => {
 
                 <button type="submit">
                   <div className="cta-button">
-                    <div className="bg-circle" />
-                    <p className="text">
+                    <div className="bg-none" />
+                    <p className="text-white-50">
                       {loading ? "Sending..." : "Send"}
                     </p>
                   </div>
@@ -106,8 +106,8 @@ const Contact = () => {
                     href="upi://pay?pa=gokulprince1225@okaxis&pn=GokulPrince&cu=INR"
                     className="cta-button"
                   >
-                    <div className="bg-circle" />
-                    <p className="text">Tip Me!</p>
+                    <div className="bg-none" />
+                    <p className="text-white-50">Tip Me!</p>
                   </a>
                   <img
                     src="/images/upi-qr.png"
