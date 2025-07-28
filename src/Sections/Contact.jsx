@@ -91,14 +91,11 @@ const Contact = () => {
                 </div>
 
                 <button type="submit">
-                  <div className="cta-button group">
+                  <div className="cta-button">
                     <div className="bg-circle" />
                     <p className="text">
                       {loading ? "Sending..." : "Send"}
                     </p>
-                    <div className="arrow-wrapper">
-                      <img src="/images/arrow-down.svg" alt="arrow" />
-                    </div>
                   </div>
                 </button>
                 <div className="mt-6 flex flex-col items-center gap-3">
@@ -107,13 +104,10 @@ const Contact = () => {
                   </p>
                   <a
                     href="upi://pay?pa=gokulprince1225@okaxis&pn=GokulPrince&cu=INR"
-                    className="cta-button group"
+                    className="cta-button"
                   >
                     <div className="bg-circle" />
                     <p className="text">Tip Me!</p>
-                    <div className="arrow-wrapper">
-                      <img src="/images/arrow-down.svg" alt="arrow" />
-                    </div>
                   </a>
                   <img
                     src="/images/upi-qr.png"
