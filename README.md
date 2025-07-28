@@ -1,12 +1,34 @@
-# React + Vite
+# 🚀 Gokulnithi's Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A visually rich, responsive developer portfolio showcasing intuitive 3D experiences, clean UI components, and smooth interactions — crafted with modern frontend tools and personal branding in mind.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🧠 Built with **React**, **Vite**, and **Tailwind CSS**
+- 🌌 Interactive 3D models using **Three.js** and **React Three Fiber**
+- 🎨 Responsive and animated layouts powered by **GSAP**
+- 💡 Smooth routing and optimized asset handling
+- 📬 Integrated with **EmailJS** for seamless contact form submissions
+- 🖱️ Scroll-triggered showcase animations using `ScrollTrigger` and `useGSAP`
+- 📁 Deployed via **Vercel**, version-controlled on **GitHub**
 
-## Expanding the ESLint configuration
+## 🧩 Technologies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Tool              | Purpose                         |
+|-------------------|----------------------------------|
+| React             | UI component architecture        |
+| Tailwind CSS      | Utility-first responsive design  |
+| Three.js + Drei   | 3D model rendering & interaction |
+| GSAP + ScrollTrigger | UI/UX animation toolkit        |
+| Vite              | Lightning-fast build setup       |
+| EmailJS           | Email form integration           |
+| Vercel            | Production deployment            |
+
+## 📷 Live Demo
+
+> [🔗 View Live Portfolio](https://your-vercel-app-url.vercel.app)
+
+
+## 🙏 Shoutout
+
+Big thanks to [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) and Adrian Hajdin for their incredible tutorials and inspiration that guided parts of this build!
