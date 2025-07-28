@@ -10,17 +10,43 @@ import { BlendFunction } from "postprocessing";
 import * as THREE from "three";
 
 export function Room(props) {
+  const gradientCanvas = document.createElement('canvas');
+gradientCanvas.width = gradientCanvas.height = 256;
+
+const ctx = gradientCanvas.getContext('2d');
+
+// Create radial gradient from center to edge
+const gradient = ctx.createRadialGradient(
+  128, 128, 20, // center x, y, radius
+  128, 128, 128 // outer radius
+);
+
+// Blue glow progression
+gradient.addColorStop(0, "#00c8ff");  // radiant center blue
+gradient.addColorStop(0.5, "#005bff"); // electric mid blue
+gradient.addColorStop(1, "#001f4d");  // deep outer navy
+
+ctx.fillStyle = gradient;
+ctx.fillRect(0, 0, 256, 256);
+
+// Create texture
+const gradientTexture = new THREE.CanvasTexture(gradientCanvas);
+gradientTexture.needsUpdate = true;
+
+// Material for the room
+const defaultRoomMaterial = new THREE.MeshStandardMaterial({
+  map: gradientTexture,
+  roughness: 0.5,
+  metalness: 0.2,
+});
+
   const { nodes, materials } = useGLTF("/models/optimized-room.glb");
   const screensRef = useRef();
-  const matcapTexture = useTexture("/mat1.png");
 
   const curtainMaterial = new THREE.MeshPhongMaterial({
     color: "#d90429",
   });
 
-  const bodyMaterial = new THREE.MeshPhongMaterial({
-    map: matcapTexture,
-  });
 
   const tableMaterial = new THREE.MeshPhongMaterial({
     color: "#582f0e",
@@ -57,7 +83,7 @@ export function Room(props) {
         geometry={nodes._________6_blinn1_0.geometry}
         material={curtainMaterial}
       />
-      <mesh geometry={nodes.body1_blinn1_0.geometry} material={bodyMaterial} />
+      <mesh geometry={nodes.body1_blinn1_0.geometry} material={defaultRoomMaterial} />
       <mesh geometry={nodes.cabin_blinn1_0.geometry} material={tableMaterial} />
       <mesh
         geometry={nodes.chair_body_blinn1_0.geometry}
