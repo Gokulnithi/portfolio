@@ -94,7 +94,7 @@ const Contact = () => {
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
-                      {loading ? "Sending..." : "Send Message"}
+                      {loading ? "Sending..." : "Send"}
                     </p>
                     <div className="arrow-wrapper">
                       <img src="/images/arrow-down.svg" alt="arrow" />
@@ -110,7 +110,7 @@ const Contact = () => {
                     className="cta-button group"
                   >
                     <div className="bg-circle" />
-                    <p className="text">Buy Me a Coffee ☕</p>
+                    <p className="text">Tip Me!</p>
                     <div className="arrow-wrapper">
                       <img src="/images/arrow-down.svg" alt="arrow" />
                     </div>
